@@ -24,7 +24,7 @@ PlayEdu 基于 Java + MySQL 开发，采用前后端分离模式，前台采用 
 
 ### MySQL配置
 
-请使用MySQL8.1 
+请使用MySQL 8.1 
 
 建议不要直接使用root账密
 
