@@ -1,6 +1,6 @@
 ## 打赏链接
 
-[**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)
+[**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)       <---感谢大佬吧，我这点东西才一奈奈
 
 [![**点我打赏，用爱发电**](./docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
 
