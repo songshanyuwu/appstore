@@ -30,6 +30,7 @@ PlayEdu 基于 Java + MySQL 开发，采用前后端分离模式，前台采用 
 
 请自行新建账号playedu，以及创建数据库playedu
 
+
 ### MinIO配置
 
 登录进入到后台，选择系统配置 - MinIO 配置，按照下面的表格输入对应的配置：
