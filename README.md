@@ -54,6 +54,7 @@
 - https://1p.131.gs
 
 **感谢作者[@包子叔](https://github.com/baozishu)**
+**感谢大佬[okxlin](https://github.com/okxlin/appstore)**
 
 ## 2. 使用方式
 
