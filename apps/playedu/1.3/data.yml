@@ -1,0 +1,103 @@
+additionalProperties:
+    formFields:
+        - default: ""
+          envKey: PANEL_DB_HOST
+          key: mysql
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: service
+        - default: "3306"
+          edit: true
+          envKey: PANEL_DB__PORT
+          labelEn: Database Service Port
+          labelZh: 数据库服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: playedu  
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: playedu  
+          envKey: PANEL_DB_USER
+          labelEn: User
+          labelZh: 数据库用户
+          required: true
+          rule: paramCommon
+          type: text  
+        - default: playedu  
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: ""
+          edit: true
+          envKey: PANEL_REDIS_HOST
+          key: redis
+          labelEn: Redis Service
+          labelZh: Redis服务
+          required: true
+          type: service
+        - default: "6379"
+          edit: true
+          envKey: PANEL_REDIS_PORT
+          labelEn: Redis Service Port
+          labelZh: Redis服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: "jhkdjhkjdhsIUTYURTU"
+          edit: true
+          envKey: PANEL_REDIS_PASSWORD
+          labelEn: Redis Service Password
+          labelZh: Redis服务密码
+          required: true
+          rule: paramCommon
+          type: password
+        - default: "playeduxyz"
+          edit: true
+          envKey: PLAYEDU_JWT_KEY
+          labelEn: PLAYEDU_JWT_KEY
+          labelZh: JSON_Web_Token密钥
+          required: true
+          rule: paramCommon
+          type: text
+        - default: 9800
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: PC学员端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9700
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP2
+          labelEn: Port
+          labelZh: API服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9801
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP3
+          labelEn: Port
+          labelZh: H5学员端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9900
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP4
+          labelEn: Port
+          labelZh: 后台管理端口
+          required: true
+          rule: paramPort
+          type: number

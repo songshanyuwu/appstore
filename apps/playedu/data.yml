@@ -1,0 +1,21 @@
+name: 开源培训系统 PlayEdu开源培训系统
+tags:
+    - 建站
+title: PlayEdu开源培训系统
+type: WebSite
+description: PlayEdu开源培训系统
+additionalProperties:
+    key: playedu
+    name: PlayEdu
+    tags:
+        - WebSite
+    shortDescZh: PlayEdu开源培训系统
+    shortDescEn: PlayEdu Open Source Training System
+    type: WebSite
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://playedu.xyz
+    github: https://github.com/PlayEdu/PlayEdu
+    gitee: https://gitee.com/playeduxyz/playedu
+    document: https://www.playedu.xyz/docs/docs/intro/
