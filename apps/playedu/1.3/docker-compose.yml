@@ -5,6 +5,8 @@ services:
     restart: always
     networks:
       - 1panel-network
+    volumes:
+      - ./data/logs/nginx:/var/log/nginx
     ports:
       - "${PANEL_APP_PORT_HTTP}:9800"
       - "${PANEL_APP_PORT_HTTP2}:9700"
