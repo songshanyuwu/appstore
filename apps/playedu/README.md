@@ -22,6 +22,10 @@ PlayEdu 基于 Java + MySQL 开发，采用前后端分离模式，前台采用 
 [Github地址](https://github.com/PlayEdu/PlayEdu)
 [Gitee地址](https://gitee.com/playeduxyz/playedu)
 
+### MySQL配置
+
+请使用MySQL8.1 建议不要直接使用root账密，自行新建账号playedu，以及创建数据库playedu。
+
 ### MinIO配置
 
 登录进入到后台，选择系统配置 - MinIO 配置，按照下面的表格输入对应的配置：
