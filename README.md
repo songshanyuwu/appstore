@@ -1,13 +1,16 @@
-## 打赏链接
+拉取1panel第三方应用脚本
 
-[**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)      [ <---感谢大佬吧，我这点东西才一奈奈]
+## 参考链接
 
-[![**点我打赏，用爱发电**](./docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
+1Panel 本地应用创建技巧及第三方应用库举例(https://bbs.fit2cloud.com/t/topic/640)
+svip520/1panel-appstore(https://gitee.com/svip520/1panel-appstore)
+okxlin/appstore(https://github.com/okxlin/appstore)
+qwenode/1panel-appstore(https://github.com/qwenode/1panel-appstore)
+
 
 * * *
 ## 目录
 
-- [打赏链接](#打赏链接)
 - [目录](#目录)
 - [免责声明](#免责声明)
   - [1. 镜像容器适配](#1-镜像容器适配)
