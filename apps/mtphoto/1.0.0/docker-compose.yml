@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  mt-photos:
+    container_name: ${CONTAINER_NAME}
+    image: mtphotos/mt-photos:latest
+    volumes:
+      - ./config:/config
+      - ${DATA_PATH}/upload:/upload
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8063
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

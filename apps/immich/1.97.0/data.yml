@@ -1,0 +1,56 @@
+additionalProperties:
+    formFields:
+        - default: 40194
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data/upload
+          edit: true
+          envKey: UPLOAD_LOCATION
+          labelEn: Path to folder for uploading
+          labelZh: 上传用文件夹路径
+          required: true
+          type: text
+        - default: ./data/cache
+          edit: true
+          envKey: CACHE_PATH
+          labelEn: Cache folder path
+          labelZh: 缓存文件夹路径
+          required: true
+          type: text
+        - default: ./data/data
+          edit: true
+          envKey: DB_PATH
+          labelEn: Database folder path
+          labelZh: 数据库文件夹路径
+          required: true
+          type: text
+        - default: immich
+          edit: true
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: postgres
+          edit: true
+          envKey: PANEL_DB_USER
+          labelEn: Postgres User
+          labelZh: Postgres 数据库用户
+          required: true
+          rule: paramCommon
+          type: text
+        - default: immich
+          edit: true
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Postgres Password
+          labelZh: Postgres 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password

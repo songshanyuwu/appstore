@@ -1,0 +1,41 @@
+version: "2.4"
+services:
+  freshrss:
+    container_name: ${CONTAINER_NAME}
+    image: freshrss/freshrss:1.24.1
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    volumes:
+      - ./data:/var/www/FreshRSS/data
+      - ./extensions:/var/www/FreshRSS/extensions
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      TZ: Asia/Shanghai
+      CRON_MIN: '2,32'
+      TRUSTED_PROXY: 0
+      FRESHRSS_INSTALL: |-
+        --api_enabled
+        --db-base ${PANEL_DB_NAME}
+        --db-host ${PANEL_DB_HOST}:${PANEL_DB_PORT}
+        --db-password ${PANEL_DB_USER_PASSWORD}
+        --db-type mysql
+        --db-user ${PANEL_DB_USER}
+        --default_user admin
+        --language zh-cn
+      FRESHRSS_USER: |-
+        --api_password ${ADMIN_PASSWORD}
+        --email ${ADMIN_EMAIL}
+        --language zh-cn
+        --password ${ADMIN_PASSWORD}
+        --user admin
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+
+networks:
+  1panel-network:
+    external: true

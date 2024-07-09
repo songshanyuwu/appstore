@@ -1,0 +1,56 @@
+additionalProperties:
+    formFields:
+        - default: ""
+          key: mysql
+          envKey: PANEL_DB_HOST
+          required: true
+          type: service
+          labelEn: Database Service
+          labelZh: 数据库服务
+        - default: freshrss
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: freshrss
+          envKey: PANEL_DB_USER
+          labelEn: User
+          labelZh: 数据库用户
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: freshrss
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 8080
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: admin@example.com
+          envKey: ADMIN_EMAIL
+          labelEn: Admin Email
+          labelZh: 管理员邮箱
+          required: true
+          rule: paramComplexity
+          type: text
+        - default: freshrss
+          envKey: ADMIN_PASSWORD
+          labelEn: Admin Password
+          labelZh: 管理员密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password

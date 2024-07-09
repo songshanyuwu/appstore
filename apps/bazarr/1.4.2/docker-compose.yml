@@ -1,0 +1,19 @@
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:1.4.2
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config
+      - ${MEDIA_LOCATION}:/tv
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:6767
+    restart: unless-stopped
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

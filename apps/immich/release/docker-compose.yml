@@ -1,0 +1,85 @@
+version: '3'
+services:
+  immich-server:
+    container_name: ${CONTAINER_NAME}-server
+    restart: always
+    networks:
+      - 1panel-network
+    image: altran1502/immich-server:release
+    command: [ "start.sh", "immich" ]
+    volumes:
+      - ${UPLOAD_LOCATION}:/usr/src/app/upload
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - config.env
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3001
+    depends_on:
+      - immich-redis
+      - immich-database
+    labels:  
+      createdBy: "Apps"
+
+  immich-microservices:
+    container_name: ${CONTAINER_NAME}-microservices
+    restart: always
+    networks:
+      - 1panel-network
+    image: altran1502/immich-server:release
+    # extends:
+    #   file: hwaccel.yml
+    #   service: hwaccel
+    command: [ "start.sh", "microservices" ]
+    volumes:
+      - ${UPLOAD_LOCATION}:/usr/src/app/upload
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - config.env
+    depends_on:
+      - immich-redis
+      - immich-database
+    labels:  
+      createdBy: "Apps"
+
+  immich-machine-learning:
+    container_name: ${CONTAINER_NAME}-machine_learning
+    restart: always
+    networks:
+      - 1panel-network
+    image: altran1502/immich-machine-learning:release
+    volumes:
+      - ${CACHE_PATH}:/cache
+    env_file:
+      - config.env
+    labels:  
+      createdBy: "Apps"
+
+  immich-redis:
+    container_name: ${CONTAINER_NAME}-redis
+    restart: always
+    networks:
+      - 1panel-network
+    image: "redis:6.2-alpine@sha256:c5a607fb6e1bb15d32bbcf14db22787d19e428d59e31a5da67511b49bb0f1ccc"
+    labels:  
+      createdBy: "Apps"
+
+  immich-database:
+    container_name: ${CONTAINER_NAME}-postgres
+    restart: always
+    networks:
+      - 1panel-network
+    image: "tensorchord/pgvecto-rs:pg14-v0.1.11@sha256:0335a1a22f8c5dd1b697f14f079934f5152eaaa216c09b61e293be285491f8ee"
+    env_file:
+      - config.env
+    environment:
+      - POSTGRES_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - POSTGRES_USER=${PANEL_DB_USER}
+      - POSTGRES_DB=${PANEL_DB_NAME}
+    volumes:
+      - ${DB_PATH}:/var/lib/postgresql/data
+    labels:  
+      createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true

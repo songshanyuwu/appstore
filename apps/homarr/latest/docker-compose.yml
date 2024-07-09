@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  homarr:
+    container_name: ${CONTAINER_NAME}
+    image: ghcr.io/ajnart/homarr:latest
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Optional, only if you want docker integration
+      - ./configs:/app/data/configs
+      - ./icons:/app/public/icons
+      - ./data:/data
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:7575
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
