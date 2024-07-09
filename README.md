@@ -22,9 +22,6 @@
   - [2.1 国内网络](#21-国内网络)
     - [2.1.1 使用 git 命令获取应用](#211-使用-git-命令获取应用)
     - [2.1.2 使用压缩包方式获取应用](#212-使用压缩包方式获取应用)
-  - [2.2 国际互联网络](#22-国际互联网络)
-    - [2.2.1 使用 git 命令获取应用](#221-使用-git-命令获取应用)
-    - [2.2.2 使用压缩包方式获取应用](#222-使用压缩包方式获取应用)
 - [3. 备注](#3-备注)
 
 
@@ -79,38 +76,6 @@ rm -r /opt/1panel/resource/apps/local/appstore-localApps
 `1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
 wget -P /opt/1panel/resource/apps/local https://ghproxy.com/https://github.com/songshanyuwu/appstore/archive/refs/heads/localApps.zip
-
-unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/localApps.zip
-
-cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
-
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
-
-rm /opt/1panel/resource/apps/local/localApps.zip
-```
-
-然后应用商店刷新本地应用即可。
-
-### 2.2 国际互联网络
-
-#### 2.2.1 使用 git 命令获取应用
-
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
-```shell
-git clone -b localApps https://github.com/songshanyuwu/appstore /opt/1panel/resource/apps/local/appstore-localApps
-
-cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
-
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
-```
-
-然后应用商店刷新本地应用即可。
-
-#### 2.2.2 使用压缩包方式获取应用
-
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
-```shell
-wget -P /opt/1panel/resource/apps/local https://github.com/songshanyuwu/appstore/archive/refs/heads/localApps.zip
 
 unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/localApps.zip
 
