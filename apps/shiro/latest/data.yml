@@ -1,0 +1,80 @@
+additionalProperties:
+    formFields:
+        - default: "2323"
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: "https://innei.ren/api/v2"
+          edit: false
+          envKey: NEXT_PUBLIC_API_URL
+          labelEn: Public API URL
+          labelZh: 公开 API 地址
+          required: true
+          type: text
+        - default: "https://api.innei.ren"
+          edit: false
+          envKey: NEXT_PUBLIC_GATEWAY_URL
+          labelEn: Public Gateway URL
+          labelZh: 公共网关地址
+          required: true
+          type: text
+        - default: "pk_test_aaaaaaaaaaaaaaaaaxxxxxx"
+          edit: false
+          envKey: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+          labelEn: Clerk Publishable Key
+          labelZh: Clerk 发布密钥
+          required: true
+          type: text
+        - default: "/sign-in"
+          edit: false
+          envKey: NEXT_PUBLIC_CLERK_SIGN_IN_URL
+          labelEn: Clerk Sign-In URL
+          labelZh: Clerk 登陆 URL
+          required: true
+          type: text
+        - default: "/sign-up"
+          edit: false
+          envKey: NEXT_PUBLIC_CLERK_SIGN_UP_URL
+          labelEn: Clerk Sign-Up URL
+          labelZh: Clerk 注册 URL
+          required: true
+          type: text
+        - default: "/"
+          edit: false
+          envKey: NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL
+          labelEn: Clerk After Sign-In URL
+          labelZh: Clerk 登陆后 URL
+          required: true
+          type: text
+        - default: "/"
+          edit: false
+          envKey: NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL
+          labelEn: Clerk After Sign-Up URL
+          labelZh: Clerk 注册后 URL
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: CLERK_SECRET_KEY
+          labelEn: Clerk Secret Key
+          labelZh: Clerk 密钥
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: TMDB_API_KEY
+          labelEn: TMDB API Key
+          labelZh: TMDB API 密钥
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: GH_TOKEN
+          labelEn: GitHub Token
+          labelZh: GitHub 令牌
+          required: true
+          type: text

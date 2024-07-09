@@ -1,0 +1,20 @@
+name: Meting
+tags:
+    - 工具
+title: 开源音乐API服务
+type: 工具
+description: Meting 是一个开源的音乐 API 服务
+additionalProperties:
+    key: meting
+    name: Meting
+    tags:
+        - Tool
+    shortDescZh: 开源音乐API服务
+    shortDescEn: Open-source music API service
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/xizeyoupan/Meting-API
+    github: https://github.com/xizeyoupan/Meting-API
+    document: https://github.com/xizeyoupan/Meting-API

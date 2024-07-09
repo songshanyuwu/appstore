@@ -1,0 +1,20 @@
+name: Shiro
+tags:
+    - 工具
+title: 极简主义个人网站
+type: 工具
+description: Shiro 是一个极简主义的个人网站项目，纸的纯净和雪的清新
+additionalProperties:
+    key: shiro
+    name: Shiro
+    tags:
+        - Tool
+    shortDescZh: 极简主义个人网站
+    shortDescEn: Minimalist personal website
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/Innei/Shiro
+    github: https://github.com/Innei/Shiro
+    document: https://github.com/Innei/Shiro

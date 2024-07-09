@@ -1,0 +1,20 @@
+name: MX-Space
+tags:
+    - 工具
+title: 个人博客系统
+type: 工具
+description: MX-Space 是一个开源的个人博客系统
+additionalProperties:
+    key: mx-space
+    name: MX-Space
+    tags:
+        - Tool
+    shortDescZh: 开源个人博客系统
+    shortDescEn: Open-source personal blog system
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/mx-space/core
+    github: https://github.com/mx-space/core
+    document: https://github.com/mx-space/core

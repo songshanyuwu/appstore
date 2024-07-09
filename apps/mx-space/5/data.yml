@@ -1,0 +1,24 @@
+additionalProperties:
+    formFields:
+        - default: "2333"
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: JWT_SECRET
+          labelEn: JWT Secret
+          labelZh: JWT 密钥
+          required: false
+          type: text
+        - default: ""
+          edit: true
+          envKey: ALLOWED_ORIGINS
+          labelEn: Allowed Origins
+          labelZh: 允许的来源
+          required: true
+          type: text

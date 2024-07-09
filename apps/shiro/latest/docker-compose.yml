@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  shiro:
+    container_name: shiro
+    image: innei/shiro:latest
+    restart: always
+    environment:
+      - NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - NEXT_PUBLIC_GATEWAY_URL=${NEXT_PUBLIC_GATEWAY_URL}
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      - NEXT_PUBLIC_CLERK_SIGN_IN_URL=${NEXT_PUBLIC_CLERK_SIGN_IN_URL}
+      - NEXT_PUBLIC_CLERK_SIGN_UP_URL=${NEXT_PUBLIC_CLERK_SIGN_UP_URL}
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=${NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL}
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=${NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL}
+      - CLERK_SECRET_KEY=${CLERK_SECRET_KEY}
+      - TMDB_API_KEY=${TMDB_API_KEY}
+      - GH_TOKEN=${GH_TOKEN}
+    ports:
+      - '${PANEL_APP_PORT_HTTP}:2323'
+    networks:
+      - 1panel-network
+
+networks:  
+  1panel-network:  
+    external: true
