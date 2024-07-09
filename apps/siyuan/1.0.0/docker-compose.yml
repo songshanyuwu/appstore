@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  main:
+    container_name: ${CONTAINER_NAME}
+    image: b3log/siyuan
+    command: ['--workspace=/siyuan/workspace/', '--accessAuthCode=${AUTH_CODE}']
+    user: '0:0'
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:6806
+    volumes:
+      - ./workspace:/siyuan/workspace
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

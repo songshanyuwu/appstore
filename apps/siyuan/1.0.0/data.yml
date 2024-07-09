@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 6806
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: AUTH_CODE
+      labelEn: Auth Code
+      labelZh: 授权码
+      required: true
+      rule: paramComplexity
+      type: text

@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  rsshub:
+    container_name: ${CONTAINER_NAME}
+    image: diygod/rsshub:chromium-bundled-2024-02-01
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:1200
+    env_file:
+      - config.env
+    labels:
+        createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

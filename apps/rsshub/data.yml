@@ -1,0 +1,13 @@
+additionalProperties:
+  key: rsshub   #应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: RssHub  #应用名称
+  tags:
+    - Tool #应用标签，可以有多个，请参照下方的标签列表
+  shortDescZh: RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器。 #应用中文描述，不要超过30个字
+  shortDescEn: RSSHub is an open source, easy to use, and extensible RSS feed aggregator. #应用英文描述
+  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
+  crossVersionUpdate: false  #是否可以跨大版本升级
+  limit: 0 #应用安装数量限制，0 代表无限制
+  website: https://docs.rsshub.app #官网地址
+  github: https://github.com/DIYgod/RSSHub #github 地址
+  document: https://docs.rsshub.app #文档地址

@@ -1,0 +1,28 @@
+version: "2.4"
+services:
+  traefik:
+    container_name: ${CONTAINER_NAME}
+    image: traefik:v2.10
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    command: traefik --configFile /etc/traefik.toml
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/var/log
+      - ./certs/:/etc/traefik/certs
+      - ./config/:/etc/traefik/config
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${HTTP_PORT}:80
+      - ${HTTPS_PORT}:443
+    environment:
+      TZ: Asia/Shanghai
+    networks:
+      - 1panel-network
+    labels:
+      craetedBy: Apps
+networks:
+  1panel-network:
+    external: true
