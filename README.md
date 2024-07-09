@@ -2,10 +2,10 @@
 
 ## 参考链接
 
-1Panel 本地应用创建技巧及第三方应用库举例(https://bbs.fit2cloud.com/t/topic/640)
-svip520/1panel-appstore(https://gitee.com/svip520/1panel-appstore)
-okxlin/appstore(https://github.com/okxlin/appstore)
-qwenode/1panel-appstore(https://github.com/qwenode/1panel-appstore)
+- [1Panel 本地应用创建技巧及第三方应用库举例](https://bbs.fit2cloud.com/t/topic/640)
+- [svip520/1panel-appstore](https://gitee.com/svip520/1panel-appstore)
+- [okxlin/appstore](https://github.com/okxlin/appstore)
+- [qwenode/1panel-appstore](https://github.com/qwenode/1panel-appstore)
 
 
 * * *
@@ -26,7 +26,6 @@ qwenode/1panel-appstore(https://github.com/qwenode/1panel-appstore)
     - [2.2.1 使用 git 命令获取应用](#221-使用-git-命令获取应用)
     - [2.2.2 使用压缩包方式获取应用](#222-使用压缩包方式获取应用)
 - [3. 备注](#3-备注)
-- [4. 应用一览图](#4-应用一览图)
 
 
 ***
@@ -56,8 +55,6 @@ qwenode/1panel-appstore(https://github.com/qwenode/1panel-appstore)
 
 - https://1p.131.gs
 
-**感谢作者[@包子叔](https://github.com/baozishu)**
-**感谢大佬[okxlin](https://github.com/okxlin/appstore)**
 
 ## 2. 使用方式
 
@@ -153,6 +150,3 @@ cat ./data/hbbs/id_ed25519.pub
 
 ```
 
-## 4. 应用一览图
-
-![](./docs/app-list.png)
